@@ -8,6 +8,7 @@ import EventForm from "../../features/events/eventForm/EventForm";
 import Sandbox from "../../features/sandox/Sandbox";
 import { useLocation } from "react-router-dom";
 import ModalManager from "../common/modals/ModalManager";
+import { ToastContainer } from "react-toastify";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
     <ModalManager />
+      <ToastContainer theme='colored'  position='bottom-right' hideProgressBar/>
       <Route exact path='/' component={HomePage} />
       <Route path={'/(.+)'} render={() => (
         <>
