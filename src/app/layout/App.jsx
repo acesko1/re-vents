@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 import ModalManager from "../common/modals/ModalManager";
 import { ToastContainer } from "react-toastify";
 import ErrorComponent from "../common/errors/ErrorComponent";
+import AccountPage from "../../features/auth/AccountPage";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Route path='/events/:id' component={EventDetailedPage} />
       <Route path={['/createEvent', '/manage/:id']} component={EventForm} key={key}/>
       <Route path='/error' component={ErrorComponent}/>
+      <Route path='/account' component={AccountPage}/>
       </Container> 
       </>
       )}/>
